@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RemMe"
+             x:Class="RemMe.MainPage">
+  <Grid>
+    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
+      </Grid.RowDefinitions>
+
+      <Image Source="collect.png" x:Name="Collect"/>
+      <Label Text="Collect Belonging" Grid.Row="1"/>
+
+      <Image Source="search.png" Grid.Column="1" x:Name="Search"/>
+      <Label Text="Search Belonging" Grid.Row="1" Grid.Column="1" />
+    </Grid>
+  </Grid>
+</ContentPage>
