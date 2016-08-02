@@ -9,11 +9,13 @@ namespace RemMe
 {
     public partial class App : Application
     {
+        public NavigationPage Navigation { get; private set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new RemMe.MainPage();
+            MainPage = Navigation = new NavigationPage(new Pages.MainPage());
         }
 
         protected override void OnStart()
