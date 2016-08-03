@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:RememberMe"
              x:Class="RememberMe.Pages.MainPage"
              Title="Remember Me">
-  <Grid>
-    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+  <Grid Padding="10">
+    <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="5">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
@@ -17,10 +17,10 @@
       </Grid.RowDefinitions>
 
       <Image Source="collect.png" x:Name="Collect"/>
-      <Label Text="Collect Belonging" Grid.Row="1" HorizontalOptions="Center"/>
+      <Label Text="Collect Belonging" Grid.Row="1" HorizontalOptions="Center" TextColor="#FF314A"/>
 
       <Image Source="search.png" Grid.Column="1" x:Name="Search"/>
-      <Label Text="Search Belonging" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
+      <Label Text="Search Belonging" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" TextColor="#FF314A"/>
     </Grid>
   </Grid>
 </ContentPage>

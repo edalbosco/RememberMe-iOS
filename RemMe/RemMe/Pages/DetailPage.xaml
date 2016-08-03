@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RememberMe.Pages.DetailPage">
+
+  <Grid>
+
+    <StackLayout Padding="10" VerticalOptions="Center">
+
+      <Label Text="{Binding NamePlace}" Margin="0,0,0,10" LineBreakMode="WordWrap" HeightRequest="60" TextColor="#FF314A"/>
+     
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+        <Image Source="ItemIcon"/>
+        <Image Source="PlaceIcon"/>
+      </StackLayout>
+    </StackLayout>
+    
+  </Grid>
+</ContentPage>

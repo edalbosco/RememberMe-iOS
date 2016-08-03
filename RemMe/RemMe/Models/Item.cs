@@ -14,6 +14,15 @@ namespace RememberMe.Models
 		public int ID { get; set; }
 		public string Name { get; set; }
 		public string Place { get; set; }
-	}
+        
+        [Ignore]
+        public string NamePlace
+        {
+            get
+            {
+                return "Your " + Name + " is " + Place;
+            }
+        }
+    }
 }
 

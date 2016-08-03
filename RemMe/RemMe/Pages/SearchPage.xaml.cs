@@ -30,6 +30,17 @@ namespace RememberMe.Pages
             SearchItems();
         }
 
+        public void OnDeleteItem(object sender, EventArgs e)
+        {
+            App.Database.DeleteItem(((sender as BindableObject).BindingContext as Item).ID);
+            SearchItems();
+        }
+
+        public void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            App.Current.Navigation.PushAsync(new DetailPage(e.Item as Item));
+        }
+
         public string Search
         {
             get
