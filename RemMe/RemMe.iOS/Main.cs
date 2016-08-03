@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace RemMe.iOS
+namespace RememberMe.iOS
 {
     public class Application
     {

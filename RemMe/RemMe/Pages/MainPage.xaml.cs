@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace RemMe.Pages
+namespace RememberMe.Pages
 {
     public partial class MainPage : ContentPage
     {
@@ -26,12 +27,12 @@ namespace RemMe.Pages
 
         private void SearchRecognizer_Tapped(object sender, EventArgs e)
         {
-           
+            App.Current.Navigation.PushAsync(new SearchPage());
         }
 
         private void CollectRecognizer_Tapped(object sender, EventArgs e)
         {
-            
+          PopupNavigation.PushAsync(new RegisterPage()); 
         }
     }
 }

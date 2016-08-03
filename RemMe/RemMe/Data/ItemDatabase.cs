@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 using SQLite.Net;
-using RemMe.Models;
+using RememberMe.Models;
 
-namespace RemMe.Data
+namespace RememberMe.Data
 {
     public class ItemDatabase
     {
@@ -34,7 +34,7 @@ namespace RemMe.Data
 
             if (!string.IsNullOrEmpty(search))
             {
-                query += " WHERE Name like '%" + search + "%";
+                query += " WHERE Name like '%" + search + "%'";
             }
 
             lock (locker)

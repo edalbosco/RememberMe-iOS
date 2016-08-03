@@ -2,7 +2,7 @@
 using SQLite;
 using SQLite.Net;
 
-namespace RemMe.Data
+namespace RememberMe.Data
 {
 	public interface ISQLite
 	{

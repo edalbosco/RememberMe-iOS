@@ -1,21 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using RememberMe.Data;
 
 using Xamarin.Forms;
 
-namespace RemMe
+namespace RememberMe
 {
     public partial class App : Application
     {
+        static ItemDatabase database;
+
         public NavigationPage Navigation { get; private set; }
 
         public App()
         {
             InitializeComponent();
+            Current = this;
 
             MainPage = Navigation = new NavigationPage(new Pages.MainPage());
+        }
+
+        public static new App Current { get; private set; }
+
+        public static ItemDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new ItemDatabase();
+                }
+                return database;
+            }
         }
 
         protected override void OnStart()

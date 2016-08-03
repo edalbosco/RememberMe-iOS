@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace RemMe.iOS
+namespace RememberMe.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
@@ -22,6 +22,8 @@ namespace RemMe.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Rg.Plugins.Popup.IOS.Popup.Init(); // Init Popup
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
