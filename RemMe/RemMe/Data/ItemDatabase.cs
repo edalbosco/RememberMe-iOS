@@ -43,11 +43,27 @@ namespace RememberMe.Data
             }
         }
 
+        public IEnumerable<Reminder> GetReminders()
+        {
+            lock (locker)
+            {
+                return database.Table<Reminder>().ToList();
+            }
+        }
+
         public Item GetItem(int id)
         {
             lock (locker)
             {
                 return database.Table<Item>().FirstOrDefault(x => x.ID == id);
+            }
+        }
+
+        public Reminder GetReminder(int id)
+        {
+            lock (locker)
+            {
+                return database.Table<Reminder>().FirstOrDefault(x => x.ID == id);
             }
         }
 
@@ -67,11 +83,35 @@ namespace RememberMe.Data
             }
         }
 
+        public int SaveReminder(Reminder reminder)
+        {
+            lock (locker)
+            {
+                if (reminder.ID != 0)
+                {
+                    database.Update(reminder);
+                    return reminder.ID;
+                }
+                else
+                {
+                    return database.Insert(reminder);
+                }
+            }
+        }
+
         public int DeleteItem(int id)
         {
             lock (locker)
             {
                 return database.Delete<Item>(id);
+            }
+        }
+
+        public int DeleteReminder(int id)
+        {
+            lock (locker)
+            {
+                return database.Delete<Reminder>(id);
             }
         }
     }

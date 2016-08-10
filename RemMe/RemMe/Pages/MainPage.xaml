@@ -14,6 +14,8 @@
       <Grid.RowDefinitions>
         <RowDefinition Height="auto"/>
         <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
       </Grid.RowDefinitions>
 
       <Image Source="collect.png" x:Name="Collect"/>
@@ -21,6 +23,10 @@
 
       <Image Source="search.png" Grid.Column="1" x:Name="Search"/>
       <Label Text="Search Belonging" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" TextColor="#FF314A"/>
+
+      <Image Source="Reminder.png" Grid.Row="2" Grid.ColumnSpan="2" x:Name="Reminder"/>
+      <Label Text="Reminders"    Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" TextColor="#FF314A"/>
+
     </Grid>
   </Grid>
 </ContentPage>
